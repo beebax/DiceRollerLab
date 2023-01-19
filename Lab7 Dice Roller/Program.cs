@@ -1,31 +1,11 @@
-﻿//Welcome to the Grand Circus Casino!
-//How many sides should each die have?  {6}
-
-//Roll 1:
-//You rolled a 2 and a 5 (7 total)
-//Win!
-
-//Roll again? (y/n): { y}
-//Roll 2:
-//You rolled a 6 and a 6 (12 total)
-//Boxcars
-//Craps!
-
-//Roll again? (y/n): { y}
-//Roll 2:
-//You rolled a 3 and a 5 (8 total)
-
-//Roll again? (y/n): { n}
-//Thanks for playing!!
-
-Console.WriteLine("Welcome to the Dice Roller.");
+﻿Console.WriteLine("Welcome to the Dice Roller.");
 Console.WriteLine("This tool rolls two dice at a time.");
 Console.WriteLine();
-Console.Write("How many sides should each die have? Choose a number: ");
+Console.Write("How many sides should each die have? Choose a number 2 - 100: ");
 
 //Validate input - only ints
 int userChoice = 0;
-while (!int.TryParse(Console.ReadLine(), out userChoice) || userChoice < 1 || userChoice > int.MaxValue)
+while (!int.TryParse(Console.ReadLine(), out userChoice) || userChoice < 2 || userChoice > int.MaxValue)
 {
     Console.WriteLine("That input was not valid. Please try again.");
 }
